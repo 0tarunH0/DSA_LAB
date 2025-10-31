@@ -36,7 +36,7 @@ float evaluate(STACK *s,char postfix[15])
     {
         symbol=postfix[i];
         if(isdigit(symbol))
-            push(s,(float)symbol-'0');
+            push(s,(float)(symbol-'0'));
         else
         {
             opr2=pop(s);
