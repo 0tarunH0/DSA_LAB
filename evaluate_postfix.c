@@ -32,11 +32,11 @@ float evaluate(STACK *s,char postfix[15])
     float opr1,opr2,res;
     int i;
     char symbol;
-    for(i=0;postfix!='\0';i++)
+    for(i=0;postfix[i]!='\0';i++)
     {
         symbol=postfix[i];
         if(isdigit(symbol))
-            push(s,symbol-'\0');
+            push(s,(float)symbol-'\0');
         else
         {
             opr2=pop(s);
